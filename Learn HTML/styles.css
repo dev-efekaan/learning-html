@@ -1,0 +1,55 @@
+body {
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;*/
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.toggle-container {
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
+    transition: background-color 0.3s;
+}
+
+.toggle-ball {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2.1px;
+    position: absolute;
+    left: 2px; /* Başlangıç konumu */
+    background-image: url(sun.svg);
+    transition: transform 0.3s, 300ms;
+}
+
+.toggle-container.active {
+    background-color: #555;
+}
+
+.toggle-container.active .toggle-ball {
+    transform: translateX(30px); /* Sağ kayma */
+}
+
+.toggle-container.active .toggle-ball {
+    background-image: url(moon.svg);
+    transition: 300ms;
+}
